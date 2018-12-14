@@ -6,8 +6,8 @@
    Case Problem 3
 
    Columns Style Sheet
-   Author: 
-   Date:   
+   Author: Austin Inmon
+   Date:   12.12.18
 
    Filename:   lht_columns.css
 
@@ -16,17 +16,20 @@
 
 
 /* Column Styles */
-
+/* The style rule is for the article and the rule sets the colum gap of 20 pixels. There are extra browser extensions to support other browsers.  */
 article {
     -moz-column-gap: 20px;
     -webkit-column-gap: 20px;
     column-gap: 20px;
     column-width: 260px;
+    -moz-column-rule: 1px solid rgb(154, 64, 31);
+    -webkit-column-rule: 1px solid rgb(154, 64, 31);
     column-rule: 1px solid rgb(154, 64, 31);
     widows: 2;
     orphans: 2;
 }
 
+/* The rule is for the primary headings that are nested inside of the article and it sets the columns to a span and that makes the columns take up the whole page. */
 article h1 {
     column-span: all;
 }

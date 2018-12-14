@@ -6,8 +6,8 @@
    Case Problem 3
 
    Calendar Style Sheet
-   Author: 
-   Date:   
+   Author: Austin Inmon
+   Date:   12.12.18
 
    Filename:   lht_tables.css
 
@@ -19,6 +19,7 @@
 */
 @media only screen and (max-width:640px) {
 
+    /* The stle is for the table, tbody, table row, table data, table heading and the caption and the rule makes the elements display as block.   */
     table,
     tbody,
     tr,
@@ -28,11 +29,13 @@
         display: block;
     }
 
+    /* The style is for both the thead and the primary heading they will not be shown in mobile screens. */
     thead,
     h1 {
         display: none;
     }
 
+    /* The rule is for the caption and the style will make the backgroumd of gray and the font-sizeof 1.5 em. The line hieght will be 2em and the color of the text will be whitesmoke.  */
     caption {
         background: gray;
         font-size: 1.5em;
@@ -40,6 +43,7 @@
         color: whitesmoke;
     }
 
+    /* The style rule is for the table data cells and the style makes the border dottoed, gray, 1 pixel. The tetx color is blue, the position is relative, padding is 40%, and min-height is 40 pixels.  */
     td {
         border: 1px dotted gray;
         color: rgb(11, 12, 145);
@@ -48,12 +52,13 @@
         min-height: 40px;
     }
 
+    /* The rule is for the odd table rows and the background color is tan, the border is solid gray 2 pixels.  */
     tr:nth-last-of-type(odd) {
         background-color: rgb(255, 235, 178);
         border: 2px solid gray;
     }
 
-
+    /* The rule is for the for the dates to be in front of the text. The position is absolute, the width is 40%. */
     td::before {
         content: attr(data-date);
         position: absolute;
@@ -71,6 +76,8 @@
    =============================================
 */
 @media only screen and (min-width:641px) {
+
+    /* The rule is for the table and theres a background-image, The image is on the bottom right, the size s 40%, theres no repeat only one image, border is 6 pixels double and brown, a border-collapse, margin of top bottom of 20px and right left set to auto. A fixed layout and width is 85%. */
     table {
         background-image: url(lht_photo1.png);
         background-position: bottom right;
@@ -83,6 +90,7 @@
         width: 85%;
     }
 
+    /* The rule is for both, the tabke heading and the table data cells, the rule sets the border are 1 pixels solid and the color is grey, the text size is .85em, the weight is normal, padding of 5px, the top is vetical aligned, the width is 14.28% and the word-wrap is break-word.  */
     th,
     td {
         border: 1px solid gray;
@@ -94,16 +102,19 @@
         word-wrap: break-word;
     }
 
+    /* The rule is for the table data cells and the background color is tan, the color is blue.  */
     td {
         background-color: rgba(171, 171, 171, 0.6);
         color: rgb(11, 12, 145);
     }
 
+    /* For every table data cell that has a data-date with the content is 'Feb' will have a background of tan and the box shadow is gray and on the inside of the table.  */
     td[data-date*='Feb'] {
         background-color: rgba(232, 214, 148, 0.6);
-        box-shadow: inset gray 0 0 20px;
+        box-shadow: inset gray 0 0px 20px;
     }
 
+    /* The caption has a display of top, the text is centered, padding has ten pixels on the bottom, makes the size 1.2em, and the spacing between the letters will be 3 pixels. */
     caption {
         display: top;
         text-align: center;
@@ -112,8 +123,11 @@
         letter-spacing: 3px;
     }
 
-    thead>tr {
+    /* The style makes the table rows in the thead have a background color of brown and the text will be white. */
+    thead tr {
         background-color: rgb(154, 64, 3);
         color: white;
     }
+
+
 }
